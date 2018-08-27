@@ -1,4 +1,8 @@
-
+// opens curtains
+$(document).ready(function() {
+    $('#curtain1').animate({width: '200px'}, 3000)
+    $('#curtain2').animate({width: '200px'}, 3000)
+})
 
 
 //randomly pick 10 movies for quiz

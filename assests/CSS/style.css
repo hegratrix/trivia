@@ -1,3 +1,8 @@
+body {
+    background-color: black;
+    font-family: 'Acme', sans-serif;
+}
+
 #index-body {
     background-image: url("..//images/background.jpg");
     background-size: cover;
@@ -12,10 +17,12 @@
     display: block;
     margin-right: auto;
     margin-left: auto;
+    margin-top: 50px;
+    padding-top: 30px;
 }
 
 #transbox {
-    background: lightgray;
+    background-color: #d7d5e0;
     opacity: .85;
     width: 940px;
     height: 580px;
@@ -25,6 +32,85 @@
     border: 2px solid black;
 }
 
-img {
-    width: 100px;
+#curtain1 {
+    width: 775px;
+    height: 800px;
+    position: absolute;
+    top: 0;
+    left: 0;
+
 }
+
+#curtain2 {
+    width: 775px;
+    height: 800px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+#curtain3 {
+    width: 260px;
+    height: 800px;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+}
+
+#curtain4 {
+    width: 260px;
+    height: 800px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+#trans-theater {
+    width: 1123px;
+    height: 800px;
+    position: absolute;
+    top: 0;
+    left: 200px;
+}
+
+h1.index-pg {
+    text-align: center;
+    text-decoration: underline;
+    font-size: 65px;
+    padding: 10px;
+    margin-top: 40px;
+    color: #811515;
+}
+
+h2.index-pg {
+    font-size: 35px;
+    padding: 10px;
+    margin: 15px;
+    color: #811515;
+}
+
+h3.index-pg {
+    text-align: center;
+    font-size: 25px;
+    padding-top: 25px;
+    color: #811515;
+}
+
+button.index-pg {
+    background-color: #811515;
+    border: 2px solid black;
+    color: #d7d5e0;
+    font-size: 22px;
+    width: 160px;
+    height: 65px;
+    margin: 7px;
+}
+
+#buttons {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    margin: 10px;
+}
+
