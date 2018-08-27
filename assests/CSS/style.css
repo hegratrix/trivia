@@ -1,0 +1,30 @@
+#index-body {
+    background-image: url("..//images/background.jpg");
+    background-size: cover;
+}
+
+#background {
+    background-image: url("../images/film.png");
+    background-size: 1000px 640px;
+    height: 640px;
+    width: 1000px;
+    background-repeat: no-repeat;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#transbox {
+    background: lightgray;
+    opacity: .85;
+    width: 940px;
+    height: 580px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid black;
+}
+
+img {
+    width: 100px;
+}
