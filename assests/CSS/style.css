@@ -161,6 +161,7 @@ img.poster {
     font-size: 40px;
     color: #811515;
     text-decoration: underline;
+    padding-bottom: 15px;
 }
 
 .question {

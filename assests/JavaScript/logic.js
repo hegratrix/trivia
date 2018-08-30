@@ -47,7 +47,7 @@ function playWhatMovie () {
         $('.movie-answer').html(`
             <div class = "question">
             <h2 id = "in-which-movie">In which movie is it said:</h2>
-            <h2 id ="question-movie-line">${m}"${movieDataBase[m].line}"</h2>
+            <h2 id ="question-movie-line">"${movieDataBase[m].line}"</h2>
             <div class="choice-container"></div>  
             </div>
             `)
