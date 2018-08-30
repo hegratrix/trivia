@@ -38,7 +38,7 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-
+    z-index: 2;
 }
 
 #curtain2 {
@@ -47,6 +47,7 @@ body {
     position: absolute;
     top: 0;
     right: 0;
+    z-index: 2;
 }
 
 #curtain3 {
@@ -55,7 +56,7 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-
+    z-index: 2;
 }
 
 #curtain4 {
@@ -64,6 +65,7 @@ body {
     position: absolute;
     top: 0;
     right: 0;
+    z-index: 2;
 }
 
 #trans-theater {
@@ -114,3 +116,144 @@ button.index-pg {
     margin: 10px;
 }
 
+img.poster {
+    width: 300px;
+    height: 400px;
+    position: absolute;
+    top: 120px;
+    left: 350px;
+    border: 4px solid black;
+}
+
+.movie-reveal {
+    width: 440px;
+    position: absolute;
+    left: 697px;
+    top: 117px;
+    z-index: 1;
+}
+
+.movie-title {
+    font-size: 50px;
+    text-align: center;
+}
+
+.movie-line {
+    font-size: 40px;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.movie-speaker {
+    font-size: 30px;
+    text-align: right;
+    padding-top: 15px;
+    padding-bottom: 60px;
+}
+
+.movie-year {
+    font-size: 30px;
+    text-align: center;
+}
+
+.answer-status {
+    text-align: center;
+    font-size: 40px;
+    color: #811515;
+    text-decoration: underline;
+}
+
+.question {
+    width: 945px;
+    height: 395px;
+    position: absolute;
+    left: 285px;
+    top: 117px;
+    z-index: 1;
+}
+
+#in-which-movie {
+    text-align: center;
+    font-size: 35px;
+    padding-bottom: 15px;
+    color: #811515;
+}
+
+#question-movie-line {
+    text-align: center;
+    font-size: 55px;
+}
+
+#timer {
+    position: absolute;
+    text-align: center;
+    top: 433px;
+    left: 965px;
+    font-size: 37px;
+    color: #811515;
+}
+
+.option-button {
+    font-size: 55px;
+}
+
+#end-game {
+    width: 945px;
+    height: 395px;
+    position: absolute;
+    left: 285px;
+    top: 117px;
+    z-index: 1;
+    text-align: center;
+    font-size: 40px;
+}
+
+#game-over {
+    color: #811515;
+    padding-bottom: 25px;
+    font-size: 60px;
+}
+
+#again {
+    padding-top: 35px;
+    font-size: 30px;
+}
+
+.choice-container {
+    font-size: 30px;
+    margin-top: 40px;
+    margin-left: 355px;
+}
+
+.choice-boxes {
+	-webkit-appearance: none;
+	background-color: #fafafa;
+	border: 1px solid #cacece;
+	box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05);
+	padding: 9px;
+	border-radius: 3px;
+	display: inline-block;
+	position: relative;
+}
+
+
+
+.choice-boxes:active, .choice-boxes:checked:active {
+	box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px 1px 3px rgba(0,0,0,0.1);
+}
+
+.choice-boxes:checked {
+	background-color: #e9ecee;
+	border: 1px solid #adb8c0;
+	box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05), inset 15px 10px -12px rgba(255,255,255,0.1);
+	color: #99a1a7;
+}
+
+.choice-boxes:checked:after {
+	content: '\2714';
+	font-size: 15px;
+	position: absolute;
+	top: 0px;
+    left: 3px;
+	color: #811515;
+}

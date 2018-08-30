@@ -25,15 +25,22 @@
             <h2 class ="index-pg">Take this quiz to find out.</h2>
             <h3 class ="index-pg">Which Game would you like to play?</h3>
             <div id ="buttons">
-                <button class ="index-pg" onclick= "">What Movie?</button>
-                <button class ="index-pg" onclick= "">Who Said it?</button>
+                <button id = "what-movie" class ="index-pg" onclick= "closeCurtain('what')">What Movie?</button>
+                <button id = "who-said" class ="index-pg" onclick= "closeCurtain('who')">Who Said it?</button>
             </div>
         </div>
     </div>
   
     
-<script type ="text/JavaScript"></script>
-<script src="assests/JavaScript/movies.js"></script>
-<script src="assests/JavaScript/logic.js"></script>
+<script type ="text/JavaScript">
+function closeCurtain(game){
+    let whichGame = "?para1=" + game
+    setTimeout(function() {
+        location.replace('./game.html' + whichGame)
+    }, 3500);
+    $('#curtain3').animate({width: '775px'}, 2000)
+    $('#curtain4').animate({width: '775px'}, 2000)
+}
+</script>
 </body>
 </html>
