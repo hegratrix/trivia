@@ -11,7 +11,7 @@ let timer = setInterval
 //which game is selected
 let newGame = decodeURIComponent(window.location.search);
 newGame = newGame.substring(1);
-finalGame = newGame.replace('para1=','');
+let finalGame = newGame.replace('para1=','');
 if (finalGame === "what") {
     $('#curtain1').animate({width: '260px'}, 2000)
     $('#curtain2').animate({width: '260px'}, 2000)
@@ -90,14 +90,17 @@ function setTimer (game) {
     }, 1000)
 }
 
-//create random choice options
+//create random choice options/makes sure no duplicates even though speaker in data base more than once
 function whatMovieOptions () {
     let choiceOptions = []
+    let optionsString = []
     choiceOptions.push(m)
+    optionsString.push(movieDataBase[m].title)
     for (i=0; i < 3; i++) {
         let choice = Math.floor(Math.random()*(moviePool))
-        if (choice !== m) {
+        if (optionsString.indexOf(movieDataBase[choice].title) === -1) {
             choiceOptions.push(choice)
+            optionsString.push(movieDataBase[choice].title)
         } else {
             i--
         }
@@ -117,14 +120,17 @@ function whatMovieOptions () {
     }
 }              
 
-//create random choice options
+//create random choice options/makes sure no duplicates even though movie in data base more than once
 function whoSaidOptions () {
     let choiceOptions = []
+    let optionsString = []
     choiceOptions.push(m)
+    optionsString.push(movieDataBase[m].speaker)
     for (i=0; i < 3; i++) {
         let choice = Math.floor(Math.random()*(moviePool))
-        if (choice !== m) {
+        if (optionsString.indexOf(movieDataBase[choice].speaker) === -1) {
             choiceOptions.push(choice)
+            optionsString.push(movieDataBase[choice].speaker)
         } else {
             i--
         }
@@ -169,10 +175,11 @@ function checkAnswer(value, game){
 }
 
 function showAnswer (value, game) {
+    console.log(value)
     let status = ''
     if (value === true) {
         status = 'Awesome, you are correct!'
-    } else {
+    } else if (value === false) {
         status = 'Bummer, you are wrong!'
     }
     $('#timer').html('')
@@ -187,7 +194,6 @@ function showAnswer (value, game) {
         <img class="${m} poster" src = "${movieDataBase[m].picture}">
         `)
     index++
-    console.log(game)
     setTimeout(game, 3000)
 }
 
